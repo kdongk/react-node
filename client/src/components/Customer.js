@@ -1,13 +1,22 @@
 import React from 'react';
 
+import Table from '@mui/material/Table';
+import TableHead from '@mui/material/TableHead';
+import TableBody from '@mui/material/TableBody';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
+
 class Customer extends React.Component {
     render() {    // 실제 화면에 그려지는 내용
         return (
-            <div>
-                <CustomerProfile id={this.props.id} image={this.props.image} name={this.props.name}/>
-                <CustomerInfo birthday={this.props.birthday} gender={this.props.gender} job={this.props.job}/>
-
-            </div>
+            <TableRow>
+                <TableCell>{this.props.id}</TableCell>
+                <TableCell><img src={this.props.image} alt="profile"/></TableCell>
+                <TableCell>{this.props.name} </TableCell>
+                <TableCell>{this.props.birthday} </TableCell>
+                <TableCell>{this.props.gender} </TableCell>
+                <TableCell>{this.props.job} </TableCell>
+            </TableRow>
         )
     }
 }
