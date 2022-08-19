@@ -22,7 +22,7 @@ connection.connect();
 
 app.get('/api/customers', (req, res) => {
     connection.query(
-        'select * from CUSTOMER',
+        "select * from CUSTOMER",
         (err, rows, fields) => {
             res.send(rows);
         }
