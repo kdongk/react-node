@@ -5,6 +5,7 @@ import TableHead from '@mui/material/TableHead';
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
+import CustomerDelete from "./CustomerDelete";
 
 class Customer extends React.Component {
     render() {    // 실제 화면에 그려지는 내용
@@ -16,6 +17,7 @@ class Customer extends React.Component {
                 <TableCell>{this.props.birthday} </TableCell>
                 <TableCell>{this.props.gender} </TableCell>
                 <TableCell>{this.props.job} </TableCell>
+                <TableCell><CustomerDelete stateRefresh={this.props.stateRefresh} id={this.props.id}/></TableCell>
             </TableRow>
         )
     }
