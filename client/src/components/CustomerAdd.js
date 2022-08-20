@@ -21,6 +21,15 @@ class CustomerAdd extends React.Component {
             .then((response) => {
             console.log(response.data);
         })
+        this.setState({
+            file: null,
+            userName: '',
+            birthday: '',
+            gender: '',
+            job: '',
+            fileName: ''
+        })
+        window.location.reload();    // 페이지 전체 새로고침
     }
 
     handleFileChange = (e) => {
